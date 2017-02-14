@@ -1,26 +1,62 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Df9-yp-F8A"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBv-Gt-eqO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="8kL-fa-6QD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkS-fb-Rtq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJ2-hl-MOH">
+                                        <rect key="frame" x="32" y="531" width="311" height="316"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="311" id="7IO-pz-kXq"/>
+                                            <constraint firstAttribute="height" constant="316" id="IQo-9w-Z2D"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IJ2-hl-MOH" firstAttribute="leading" secondItem="QkS-fb-Rtq" secondAttribute="leading" constant="32" id="mq5-sb-0jc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QkS-fb-Rtq" firstAttribute="height" secondItem="8kL-fa-6QD" secondAttribute="height" multiplier="1.5" id="Toj-pa-roz"/>
+                            <constraint firstItem="QkS-fb-Rtq" firstAttribute="leading" secondItem="8kL-fa-6QD" secondAttribute="leadingMargin" constant="-16" id="Yb3-fM-b2i"/>
+                            <constraint firstItem="QkS-fb-Rtq" firstAttribute="width" secondItem="8kL-fa-6QD" secondAttribute="width" id="i9z-ch-Z32"/>
+                            <constraint firstItem="QkS-fb-Rtq" firstAttribute="top" secondItem="Df9-yp-F8A" secondAttribute="bottom" constant="-20" id="s1s-QO-Bay"/>
+                            <constraint firstItem="IJ2-hl-MOH" firstAttribute="top" secondItem="Df9-yp-F8A" secondAttribute="bottom" constant="511" id="uhb-eh-Hjv"/>
+                        </constraints>
+                    </scrollView>
+                    <connections>
+                        <outlet property="outterView" destination="QkS-fb-Rtq" id="8pg-8a-pcA"/>
+                        <outlet property="view" destination="8kL-fa-6QD" id="ZFe-CU-5EP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
